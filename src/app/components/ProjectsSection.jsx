@@ -108,8 +108,8 @@ const projectsData = [
   },
   {
     id: 12,
-    title: "WEBAGENCY: Lancement d'une Épopée Numérique",
-    description: "Plongez dans le défi de forger un site Webagency épique, orchestré sur une unique toile HTML et CSS. Responsive et libre de tout framework, ce projet est votre scène pour transposer une vision créative en une réalité numérique fascinante.",
+    title: "WEBAGENCY: Forgez le Web",
+    description: "Créez un site one-page captivant, purement en HTML et CSS. Responsive, sans framework, transformez une maquette en expérience numérique.",
     image: "/images/projects/webagency/1.gif",
     tag: ["Global", "Académie"],
     gitUrl: "https://github.com/capuchinisimos/webagency",
@@ -117,8 +117,8 @@ const projectsData = [
   },
   {
     id: 13,
-    title: "JARDIN",
-    description: "Project 5 description",
+    title: "JARDIN : Jardinier-Paysagiste à Versailles",
+    description: "Conception écologique et soins naturels pour parcs et jardins. Transformez votre espace vert en refuge durable.",
     image: "/images/projects/regis-jardin/jardin.gif",
     tag: ["Global", "Business"],
     gitUrl: "https://github.com/capuchinisimos/landing-page",
@@ -126,8 +126,8 @@ const projectsData = [
   },
   {
     id: 14,
-    title: "SWAMI",
-    description: "Project 5 description",
+    title: "SWAMI : Contenu, Connexion, Monétisation",
+    description: "Transformation numérique par contenus captivants pour une audience engagée et une reconnaissance inégalée dans le secteur.",
     image: "/images/projects/swami/portfolio.gif",
     tag: ["Global", "Business"],
     gitUrl: "https://github.com/capuchinisimos/landing",
@@ -135,15 +135,15 @@ const projectsData = [
   },
   {
     id: 15,
-    title: "NOUMEA",
-    description: "Project 5 description",
+    title: "NOUMEA: WordPress à Votre Image",
+    description: "Plongez dans la personnalisation WordPress sans builder. Un site responsive, animé, et SEO-optimisé vous attend. Nouméa, où votre vision prend vie.",
     image: "/images/projects/noumea/noumea.gif",
     tag: ["Global", "Académie"],
   },
   {
     id: 16,
-    title: "PORTFOLIO-1",
-    description: "Project 5 description",
+    title: "PORTFOLIO - V1 : HTML/CSS & jQuery",
+    description: "Création d'un site portfolio dynamique avec HTML, CSS et animations jQuery.",
     image: "/images/projects/portfolio-1/portfolio.gif",
     tag: ["Global", "Perso"],
     gitUrl: "https://github.com/capuchinisimos/portfolio",
@@ -151,8 +151,8 @@ const projectsData = [
   },
   {
     id: 18,
-    title: "PORTFOLIO-2",
-    description: "Project 5 description",
+    title: "PORTFOLIO - V2 : WordPress Custom",
+    description: "Personnalisation avancée d'un thème WordPress pour un portfolio unique.",
     image: "/images/projects/portfolio-2/portfolio.gif",
     tag: ["Global", "Perso"],
     gitUrl: "https://github.com/capuchinisimos/portfolio-3",
@@ -160,8 +160,8 @@ const projectsData = [
   },
   {
     id: 19,
-    title: "PORTFOLIO-3",
-    description: "Project 5 description",
+    title: "PORTFOLIO - V3 : Webflow Design",
+    description: "Conception et réalisation d'un portfolio avec Webflow pour un design interactif.",
     image: "/images/projects/portfolio-3/portfolio.gif",
     tag: ["Global", "Perso"],
     gitUrl: "https://github.com/capuchinisimos/portfolio-4",
@@ -169,8 +169,8 @@ const projectsData = [
   },
   {
     id: 20,
-    title: "PORTFOLIO-4",
-    description: "Project 5 description",
+    title: "PORTFOLIO - V4 : Vanilla JS",
+    description: "Développement d'un portfolio avec JavaScript pur pour une expérience utilisateur fluide et personnalisée.",
     image: "/images/projects/portfolio-4/1.gif",
     tag: ["Global", "Perso"],
     gitUrl: "https://github.com/capuchinisimos/portfolio-2",
@@ -179,7 +179,7 @@ const projectsData = [
   {
     id: 19,
     title: "COVERS",
-    description: "Project 5 description",
+    description: "Design de couvertures captivantes.",
     image: "/images/projects/design/covers/covers1.gif",
     tag: [ "Art"],
     
@@ -187,7 +187,7 @@ const projectsData = [
   {
     id: 20,
     title: "DEPLIANTES",
-    description: "Project 5 description",
+    description: "Création de dépliants informatifs et attractifs.",
     image: "/images/projects/design/depliantes/dep1.gif",
     tag: [ "Art"],
     
@@ -195,7 +195,7 @@ const projectsData = [
   {
     id: 19,
     title: "FLYERS",
-    description: "Project 5 description",
+    description: "Conception de flyers percutants.",
     image: "/images/projects/design/flyers/flyers1.gif",
     tag: [ "Art"],
     
@@ -203,7 +203,7 @@ const projectsData = [
   {
     id: 20,
     title: "LOGOS",
-    description: "Project 5 description",
+    description: "Création de logos marquants.",
     image: "/images/projects/design/logos/lg.gif",
     tag: [ "Art"],
     
@@ -211,7 +211,7 @@ const projectsData = [
   {
     id: 19,
     title: "NEWSLETTERS",
-    description: "Project 5 description",
+    description: "Design de newsletters engageantes.",
     image: "/images/projects/design/newsletters/neonews.gif",
     tag: ["Art"],
     
@@ -219,7 +219,7 @@ const projectsData = [
   {
     id: 20,
     title: "BANNIÈRES",
-    description: "Project 5 description",
+    description: "Conception de bannières visuelles impactantes.",
     image: "/images/projects/design/redes/banners.gif",
     tag: ["Art"],
     
