@@ -17,7 +17,7 @@ const HeroSection = () => {
         >
           <h1 className="text-white mb-4 text-3xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Konnichiwa ! Moi, c'est : {" "}
+              Konnichiwa ! Moi, c&apos;est : {" "}
             </span>
             <br></br>
             <TypeAnimation

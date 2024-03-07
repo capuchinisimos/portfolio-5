@@ -57,7 +57,7 @@ const EmailSection = () => {
         </h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md text-xl">
           {" "}
-          Mon inbox, c'est un peu comme la porte d'un frigo : toujours ouverte pour les bonnes idées et les échanges sympas. Lancez-moi un message, et mettons du piquant dans nos projets !
+          Mon inbox, c&apos;est un peu comme la porte d&apos;un frigo : toujours ouverte pour les bonnes idées et les échanges sympas. Lancez-moi un message, et mettons du piquant dans nos projets !
         </p>
         
         <div className="socials flex flex-row gap-2">
@@ -101,7 +101,7 @@ const EmailSection = () => {
                 htmlFor="subject"
                 className="text-white block text-sm mb-2 font-medium"
               >
-                L'aventure commence ici (Objet)
+                L&apos;aventure commence ici (Objet)
               </label>
               <input
                 name="subject"
