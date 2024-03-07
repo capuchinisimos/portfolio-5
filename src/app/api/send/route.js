@@ -7,8 +7,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 
 export async function POST(req, res) {
-  console.log(`API Key: ${process.env.RESEND_API_KEY}, From Email: ${process.env.FROM_EMAIL}`);
-
+  
   const { email, subject, message } = await req.json();
   console.log(email, subject, message);
   try {
