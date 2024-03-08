@@ -2,7 +2,11 @@
 import React, { useState } from "react";
 import GithubIcon from "../../../public/github-icon.svg";
 import LinkedinIcon from "../../../public/linkedin-icon.svg";
-import TwitterIcon from "../../../public/square-x_10490669.svg";
+import TwitterIcon from "../../../public/close-square-svgrepo-com.svg";
+import InstagramIcon from "../../../public/icons8-instagram (1).svg";
+import FacebookIcon from "../../../public/icons8-facebook-nouveau.svg";
+import WhatsappIcon from "../../../public/icons8-whatsapp.svg";
+import MailIcon from "../../../public/icons8-apple-mail.svg";
 import Link from "next/link";
 import Image from "next/image";
   
@@ -52,25 +56,36 @@ const EmailSection = () => {
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-30">
-        <h5 className="text-3xl font-bold text-white my-2">
+        <h2 className="text-3xl font-bold text-white my-2">
          03. Allô, le Labo?
-        </h5>
-        <p className="text-[#ADB7BE] mb-4 max-w-md text-xl">
+        </h2>
+        <p className="text-white mb-4 max-w-md text-md">
           {" "}
           Mon inbox, c&apos;est un peu comme la porte d&apos;un frigo : toujours ouverte pour les bonnes idées et les échanges sympas. Lancez-moi un message, et mettons du piquant dans nos projets !
         </p>
         
         <div className="socials flex flex-row gap-2">
-          <Link href="https://github.com/capuchinisimos">
-            <Image src={GithubIcon} alt="Github Icon" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/oceaneverdi/">
-            <Image src={LinkedinIcon} alt="Linkedin Icon" />
-          </Link>
-          <Link href="https://twitter.com/OceaneWebdev">
-            
-            <Image src={TwitterIcon} alt="Twitter Icon" />
-          </Link>
+        <a onClick={() => openInNewTab("https://github.com/capuchinisimos")} role="button" tabIndex={0}>
+    <Image src={GithubIcon} alt="Github Icon" width={24} height={24} />
+  </a>
+  <a onClick={() => openInNewTab("https://www.linkedin.com/in/oceaneverdi/")} role="button" tabIndex={0}>
+    <Image src={LinkedinIcon} alt="Linkedin Icon" width={24} height={24} />
+  </a>
+  <a onClick={() => openInNewTab("https://twitter.com/OceaneWebdev")} role="button" tabIndex={0}>
+    <Image src={TwitterIcon} alt="Twitter Icon" width={24} height={24} />
+  </a>
+  <a onClick={() => openInNewTab("https://www.instagram.com/thebestcoder/")} role="button" tabIndex={0}>
+    <Image src={InstagramIcon} alt="Instagram Icon" width={24} height={24} />
+  </a>
+  <a onClick={() => openInNewTab("https://www.facebook.com/oceanewebdev/")} role="button" tabIndex={0}>
+    <Image src={FacebookIcon} alt="Facebook Icon" width={24} height={24} />
+  </a>
+  <a onClick={() => openInNewTab("mailto:oceanewebdev@gmail.com")} role="button" tabIndex={0}>
+    <Image src={MailIcon} alt="Mail Icon" width={24} height={24} />
+  </a>
+  <a onClick={() => openInNewTab("https://api.whatsapp.com/send?phone=33767073862&text=Hello!")} role="button" tabIndex={0}>
+    <Image src={WhatsappIcon} alt="Whatsapp Icon" width={24} height={24} />
+  </a>
         </div>
       </div>
       <div>
@@ -128,7 +143,8 @@ const EmailSection = () => {
             </div>
             <button
               type="submit"
-              className="bg-primary-500 hover:bg-primary-600 text-white font-medium py-2.5 px-5 rounded-lg w-full rounded-custom "
+              className="bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white  font-medium py-2.5 px-5 rounded-lg w-full rounded-custom z-30 "
+              aria-label="Téléportez-vous à votre destination"
             >
               Téléportez !
             </button>

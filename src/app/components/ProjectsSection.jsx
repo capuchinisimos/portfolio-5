@@ -248,7 +248,7 @@ return (
     <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
       02. Labo du Code
     </h2>
-    <p className="text-[#ADB7BE] mb-4 text-center">
+    <p className="text-white mb-4 text-center">
       Bienvenue dans mon &quot;Labo du Code&quot;, l&apos;antre où la magie du développement prend vie. Ici, chaque projet est une potion unique, distillée à partir de la quintessence de la technologie et de l&apos;art. En franchissant ces portes virtuelles, vous découvrirez des créations nées d&apos;expérimentations audacieuses et d&apos;innovations sans limites. Malgré les serments de confidentialité qui scellent certains de mes travaux dans l&apos;ombre, j&apos;ai le plaisir de lever le voile sur une sélection de mes explorations les plus passionnantes. Ready pour une dose de cool tech ?
     </p>
     <div className="flex flex-wrap justify-center items-center gap-2 py-4 px-4 md:py-6">

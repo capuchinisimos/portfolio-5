@@ -120,7 +120,7 @@ const AboutSection = () => {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="pt-32">
-        <Image src="/images/coucou.webp" alt="setup de geek" width={500} height={500} className="rounded-custom transform rotate-[-6deg]"/></div>
+        <Image src="/images/setup.webp" alt="setup de geek" width={500} height={500} className="rounded-custom transform rotate-[-6deg]"/></div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">01. Ma Saga Numérique</h2>
           <p className="text-base md:text-md">
@@ -135,7 +135,7 @@ const AboutSection = () => {
             <br /><br />
             💥 Prêts pour une odyssée numérique où créativité et technologie fusionnent ? Embarquons ensemble vers l&apos;infini du web.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className="flex flex-row justify-start flex-wrap mt-8">
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
