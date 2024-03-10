@@ -1,14 +1,7 @@
-  /* eslint-disable react/prop-types */
- "use client"; 
- 
- 
- 
+"use client";
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-
-
-
 
 const TAB_DATA = [
   {
@@ -16,7 +9,7 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <>
-        <h3 className="font-bold text-sm mb-2">Langages & Scripting</h3>
+        <h3 className="font-bold text-lg mb-2">Langages & Scripting</h3>
         <ul className="list-disc pl-4 mb-4">
           <li>HTML5</li>
           <li>CSS / Sass / Less</li>
@@ -25,20 +18,20 @@ const TAB_DATA = [
           <li>Shell Scripting: Bash</li>
         </ul>
 
-        <h3 className="font-bold text-sm mb-2">Frameworks & Bibliothèques</h3>
+        <h3 className="font-bold text-lg mb-2">Frameworks & Bibliothèques</h3>
         <ul className="list-disc pl-4 mb-4">
           <li>React / Next.js / Gatsby</li>
           <li>Bootstrap / Tailwind</li>
         </ul>
 
-        <h3 className="font-bold text-sm mb-2">Développement Back-End et Bases de Données</h3>
+        <h3 className="font-bold text-lg mb-2">Développement Back-End et Bases de Données</h3>
         <ul className="list-disc pl-4 mb-4">
           <li>Node.js</li>
           <li>MongoDB</li>
           <li>MySQL</li>
         </ul>
 
-        <h3 className="font-bold text-sm mb-2">Outils & Infrastructure</h3>
+        <h3 className="font-bold text-lg mb-2">Outils & Infrastructure</h3>
         <ul className="list-disc pl-4 mb-4">
           <li>Git / GitHub / GitLab</li>
           <li>Vercel / Netlify / Heroku/ DigitalOcean</li>
@@ -46,13 +39,13 @@ const TAB_DATA = [
           <li>HTTPS / SSL / Gestion DNS / Cloudflare</li>
         </ul>
 
-        <h3 className="font-bold text-sm mb-2">Conception & Gestion de Projet</h3>
+        <h3 className="font-bold text-lg mb-2">Conception & Gestion de Projet</h3>
         <ul className="list-disc pl-4 mb-4">
           <li>Conception: UML</li>
           <li>Gestion de Projet: Kanban</li>
         </ul>
 
-        <h3 className="font-bold text-sm mb-2">CMS & Optimisation</h3>
+        <h3 className="font-bold text-lg mb-2">CMS & Optimisation</h3>
         <ul className="list-disc pl-4">
           <li>CMS: WordPress / PrestaShop</li>
           <li>Responsive Design / SEO / Accessibilité Web (WCAG)</li>
@@ -115,7 +108,7 @@ const TAB_DATA = [
 
 const AboutSection = () => {
   const [tab, setTab] = useState("skills");
-  const [ startTransition] = useTransition();
+  const [isPending, startTransition] = useTransition();
 
   const handleTabChange = (id) => {
     startTransition(() => {
@@ -129,10 +122,8 @@ const AboutSection = () => {
         <div className="pt-32">
         <Image src="/images/setup.webp" alt="setup de geek" width={500} height={500} className="rounded-custom transform rotate-[-6deg]"/></div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-        <strong style={{ visibility: 'hidden' }}> Océane Verdi développeuse web freelance
-    </strong>
           <h2 className="text-4xl font-bold text-white mb-4">01. Ma Saga Numérique</h2>
-          <p className="text-base:text-sm">
+          <p className="text-base md:text-md">
             <br/>
             ✨ C&apos;est moi, la digital nomade, slalomant entre codes et créativité depuis ma sortie de l&apos;Université de Télécommunications en 2021. Actuellement, je me spécialise chez OpenClassrooms pour devenir maître Jedi en JavaScript et React, prête à conquérir le web.
 
