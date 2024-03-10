@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import dynamic from "next/dynamic";
-import CountUp from 'react-countup';
+
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -44,6 +44,8 @@ const AchievementsSection = () => {
               className="flex flex-col items-center justify-center mx-4 my-4 sm:my-0"
             >
               <h2 className="text-white text-4xl font-bold flex flex-row">
+              <strong style={{ visibility: 'hidden' }}> Océane Verdi développeuse web freelance
+    </strong>
                 {achievement.prefix}
                 <AnimatedNumbers
                  
@@ -60,9 +62,16 @@ const AchievementsSection = () => {
                   }}
                 />
                 {achievement.postfix}
+                
               </h2>
-              <p className="text-[#ADB7BE] text-base">{achievement.metric}</p>
+              <p className="text-[#ADB7BE] text-base">{achievement.metric}
+              <strong>
+            Océane Verdi 
+            développeuse à Paris 
+            </strong>
+              </p>
             </div>
+            
           );
         })}
       </div>

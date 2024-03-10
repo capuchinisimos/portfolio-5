@@ -7,7 +7,7 @@ import InstagramIcon from "../../../public/icons8-instagram (1).svg";
 import FacebookIcon from "../../../public/icons8-facebook-nouveau.svg";
 import WhatsappIcon from "../../../public/icons8-whatsapp.svg";
 import MailIcon from "../../../public/icons8-apple-mail.svg";
-import Link from "next/link";
+
 import Image from "next/image";
   
 function openInNewTab(url) {
@@ -41,7 +41,7 @@ const EmailSection = () => {
     };
 
     const response = await fetch(endpoint, options);
-    const resData = await response.json();
+   
 
     if (response.status === 200) {
       console.log("Message sent.");
@@ -57,7 +57,10 @@ const EmailSection = () => {
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
       <div className="z-30">
         <h2 className="text-3xl font-bold text-white my-2">
+        <strong style={{ visibility: 'hidden' }}> Océane Verdi développeuse frontend créative
+    </strong> <br></br>
          03. Allô, le Labo?
+        
         </h2>
         <p className="text-white mb-4 max-w-md text-md">
           {" "}

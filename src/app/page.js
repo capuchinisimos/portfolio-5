@@ -7,9 +7,14 @@ import EmailSection from "./components/EmailSection";
 import Footer from "./components/Footer";
 
 
+
+
+
 export default function Home() {
-  return (
+  return ( <>
     <main className="flex min-h-screen flex-col bg-cover bg-[#121212]">
+    
+      
       <Navbar />
       <div className="container mt-24 mx-auto px-12 py-4">
         <HeroSection />
@@ -21,5 +26,6 @@ export default function Home() {
       </div>
       <Footer />
     </main>
+    </>
   );
 }
