@@ -9,7 +9,7 @@ const Footer = () => {
       
        <Link href={"/#about"} 
        className="text-xl  text-white font-semibold">
-       <span> &lt;/Océane dev Paris&gt;</span></Link>
+       <span> &lt;/Océane dev&gt;</span></Link>
        <div className="social-links"  style={{ padding: '10px', display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px'  }}>
         <a href={`https://www.facebook.com/sharer/sharer.php?u=${siteUrl}`} target="_blank" rel="noopener noreferrer" title="Share on Facebook">
           <FaFacebookF />
@@ -42,7 +42,7 @@ const Footer = () => {
 
 </div>
         <Link href={"https://oceaneverdi.me/"} target="_blank" rel="noopener noreferrer" 
-        className="text-white-600 mt-4 md:mt-0">© 2024 Océane dev Paris. Tous droits réservés.</Link> 
+        className="text-white-600 mt-4 md:mt-0">© 2024 Océane dev. Tous droits réservés.</Link> 
       </div>
       
 

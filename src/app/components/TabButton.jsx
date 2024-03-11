@@ -7,17 +7,26 @@ const variants = {
 };
 
 const TabButton = ({ active, selectTab, children }) => {
-  const buttonClasses = active ? "text-white" : "text-[#ADB7BE]";
+  const buttonClasses = active
+    "text-[#ADB7BE] bg-transparent hover:bg-slate-600 hover:text-white";
+  
+  const borderClasses = active
+    ? "border-primary-500"
+    : "border-slate-600 hover:border-white";
 
   return (
-    <button onClick={selectTab}>
-      <p className={`mr-3 font-semibold hover:text-white ${buttonClasses}`}>
+    <button
+      onClick={selectTab}
+      className={`${buttonClasses} ${borderClasses} rounded-custom border-2 px-3 py-3 text-md cursor-pointer justify-center flex items-center flex-grow`}
+    >
+      <p className="texte-white">
         {children}
       </p>
       <motion.div
+        initial={false}
         animate={active ? "active" : "default"}
         variants={variants}
-        className="h-1 bg-primary-500 mt-2 mr-3"
+        className="h-1 absolute bottom-0 left-0 right-0 mx-auto"
       ></motion.div>
     </button>
   );

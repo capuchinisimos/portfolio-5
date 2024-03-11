@@ -150,7 +150,7 @@ const projectsData = [
     previewUrl: "https://oceaneverdi.me/",
   },
   {
-    id: 18,
+    id: 17,
     title: "PORTFOLIO - V2 : WordPress Custom",
     description: "Personnalisation avancée d'un thème WordPress pour un portfolio unique.",
     image: "/images/projects/portfolio-2/portfolio.gif",
@@ -159,7 +159,7 @@ const projectsData = [
     previewUrl: "https://oceanedev.es/",
   },
   {
-    id: 19,
+    id: 18,
     title: "PORTFOLIO - V3 : Webflow Design",
     description: "Conception et réalisation d'un portfolio avec Webflow pour un design interactif.",
     image: "/images/projects/portfolio-3/portfolio.gif",
@@ -168,7 +168,7 @@ const projectsData = [
     previewUrl: "https://oceane.es/",
   },
   {
-    id: 20,
+    id: 19,
     title: "PORTFOLIO - V4 : Vanilla JS",
     description: "Développement d'un portfolio avec JavaScript pur pour une expérience utilisateur fluide et personnalisée.",
     image: "/images/projects/portfolio-4/1.gif",
@@ -177,7 +177,7 @@ const projectsData = [
     previewUrl: "https://oceaneverdi.dev/",
   },
   {
-    id: 19,
+    id: 20,
     title: "COVERS",
     description: "Design de couvertures captivantes.",
     image: "/images/projects/design/covers/covers1.gif",
@@ -185,7 +185,7 @@ const projectsData = [
     
   },
   {
-    id: 20,
+    id: 21,
     title: "DEPLIANTES",
     description: "Création de dépliants informatifs et attractifs.",
     image: "/images/projects/design/depliantes/dep1.gif",
@@ -193,7 +193,7 @@ const projectsData = [
     
   },
   {
-    id: 19,
+    id: 22,
     title: "FLYERS",
     description: "Conception de flyers percutants.",
     image: "/images/projects/design/flyers/flyers1.gif",
@@ -201,7 +201,7 @@ const projectsData = [
     
   },
   {
-    id: 20,
+    id: 23,
     title: "LOGOS",
     description: "Création de logos marquants.",
     image: "/images/projects/design/logos/lg.gif",
@@ -209,7 +209,7 @@ const projectsData = [
     
   },
   {
-    id: 19,
+    id: 24,
     title: "NEWSLETTERS",
     description: "Design de newsletters engageantes.",
     image: "/images/projects/design/newsletters/neonews.gif",
@@ -217,7 +217,7 @@ const projectsData = [
     
   },
   {
-    id: 20,
+    id: 25,
     title: "BANNIÈRES",
     description: "Conception de bannières visuelles impactantes.",
     image: "/images/projects/design/redes/banners.gif",
@@ -245,22 +245,22 @@ const ProjectsSection = () => {
   };
 return (
   <section id="projects" className="px-4 md:px-8">
-    <h2 className="text-left text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+    <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
       02. Labo du Code
     </h2>
-    <p className="text-white mb-4 text-left">
+    <p className="text-white mb-4 text-center text-sm">
       Bienvenue dans mon &quot;Labo du Code&quot;, l&apos;antre où la magie du développement prend vie. Ici, chaque projet est une potion unique, distillée à partir de la quintessence de la technologie et de l&apos;art. En franchissant ces portes virtuelles, vous découvrirez des créations nées d&apos;expérimentations audacieuses et d&apos;innovations sans limites. Malgré les serments de confidentialité qui scellent certains de mes travaux dans l&apos;ombre, j&apos;ai le plaisir de lever le voile sur une sélection de mes explorations les plus passionnantes. Ready pour une dose de cool tech ?
     </p>
     <div className="flex flex-wrap justify-center items-center gap-2 py-4 md:py-6">
       <ProjectTag
         onClick={handleTagChange}
         name="Global"
-        isSelected={tag === "Tous"}
+        isSelected={tag === "Global"}
       />
       <ProjectTag
         onClick={handleTagChange}
         name="Business"
-        isSelected={tag === "Corporatifs"}
+        isSelected={tag === "Business"}
       />
       <ProjectTag
         onClick={handleTagChange}
@@ -275,10 +275,10 @@ return (
       <ProjectTag
         onClick={handleTagChange}
         name="Art"
-        isSelected={tag === "Infographie"}
+        isSelected={tag === "Art"}
       />
     </div>
-    <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 p-4">
+    <ul ref={ref} className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 ">
       {filteredProjects.map((project, index) => (
         <motion.li
           key={index}

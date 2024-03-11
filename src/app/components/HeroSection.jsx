@@ -20,6 +20,7 @@ const HeroSection = () => {
             <strong> Développeuse Front End Passionnée : Océane</strong>  {" "}
             </span>
             <br></br>
+            <span style={{ fontSize: '1.2rem' }}>
             <TypeAnimation
               sequence={[
                 
@@ -49,7 +50,7 @@ const HeroSection = () => {
               speed={50}
               repeat={Infinity}
             />
-            
+           </span>
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Exploratrice de l&apos;ère numérique, à la conquête de territoires de code inexplorés...
@@ -77,9 +78,9 @@ const HeroSection = () => {
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
+          className="col-span-4 place-self-center mt-4 pl-8 lg:mt-0"
         >
-         <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-custom rotate-[6deg]">
+         <div className="  bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-custom rotate-[6deg]">
   <Image
     src="/images/avatar1.webp"
     alt="Océane développeuse web, une jeune fille ambitieuse habillé en t-shirt blanche et jeans noir troué"

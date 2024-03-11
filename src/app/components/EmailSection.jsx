@@ -52,17 +52,18 @@ const EmailSection = () => {
   return (
     <section
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="grid md:grid-cols-2 my-4 md:my-12 px-3 py-1 gap-4 relative"
     >
       <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-primary-900 to-transparent rounded-full h-80 w-80 z-0 blur-lg absolute top-3/4 -left-4 transform -translate-x-1/2 -translate-1/2"></div>
-      <div className="z-30">
-        <h2 className="text-3xl font-bold text-white my-2">
-        <strong style={{ visibility: 'hidden' }}> Océane Verdi développeuse frontend créative
-    </strong> <br></br>
+      <div className="z-30 ">
+      <strong style={{ visibility: 'hidden' }}> Océane Verdi développeuse frontend créative
+    </strong>
+        <h2 className="text-3xl  font-bold text-white my-2">
+        
          03. Allô, le Labo?
         
         </h2>
-        <p className="text-white mb-4 max-w-md text-md">
+        <p className="text-white  mb-4 max-w-md text-md">
           {" "}
           Mon inbox, c&apos;est un peu comme la porte d&apos;un frigo : toujours ouverte pour les bonnes idées et les échanges sympas. Lancez-moi un message, et mettons du piquant dans nos projets !
         </p>

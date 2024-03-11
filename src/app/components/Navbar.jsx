@@ -31,7 +31,7 @@ const Navbar = () => {
           href={"/#about"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
-          &lt;Océane dev Paris&gt;
+          &lt;Océane dev&gt;
          
         </Link> 
         <div className="mobile-menu block md:hidden">
