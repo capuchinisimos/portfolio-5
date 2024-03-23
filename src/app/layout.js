@@ -92,14 +92,14 @@ export default function RootLayout({ children }) {
         <meta property="og:url" content="https://www.oceane-developpeuse.info/" />
         <meta property="og:title" content="Océane - Portfolio" />
         <meta property="og:description" content="Portfolio de Océane, développeuse Front End sur Paris" />
-        <meta property="og:image" content="../../public/images/Moi.webp" />
+        <meta property="og:image" content="/public/images/Moi.webp" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="Portfolio" />
         <meta property="twitter:url" content="https://www.oceane-developpeuse.info/" />
         <meta property="twitter:title" content="Océane - Portfolio" />
         <meta property="twitter:description" content="Portfolio de Océane, développeuse Front End sur Paris" />
-        <meta property="twitter:image" content="../../public/images/Moi.webp" />
+        <meta property="twitter:image" content="/public/images/Moi.webp" />
         
         {/* Ajoutez ici d'autres métadonnées si nécessaire */}
     

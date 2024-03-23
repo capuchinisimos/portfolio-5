@@ -101,7 +101,7 @@ const HeroSection = () => {
       animate="animate"
       className="col-span-4 place-self-center mt-4 pl-8 lg:mt-0"
     >
-      <div className="bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-custom rotate-[6deg] ">
+      <div className="bg-[#c084fc] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-custom rotate-[6deg] ">
         <motion.div variants={imageVariants}>
           <Image
             src="/images/avatar1.webp"
