@@ -1,65 +1,123 @@
 "use client";
-import React, { useTransition, useState } from "react";
+import React, { useTransition, useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 
 
-const TAB_DATA = [
-  {
-    title: "Skills",
-    id: "skills",
-    content: (
-      <>
-        <h3 className="font-bold text-sm mb-2">Langages & Scripting</h3>
-        <ul className="list mb-4 text-sm">
+
+const AccordionItem = ({ title, children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const contentRef = useRef(null);
+  const toggleAccordion = () => {
+    setIsOpen(!isOpen);
+  };
+  // Utiliser l'API Intersection Observer pour ouvrir l'accordéon lors du défilement
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsOpen(true);
+        }
+      },
+      { threshold: 0.1 } // Déclenche l'observer lorsque 10% de l'élément est visible
+    );
+
+    if (contentRef.current) {
+      observer.observe(contentRef.current);
+    }
+
+    return () => {
+      if (contentRef.current) {
+        observer.unobserve(contentRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div className="mb-4">
+      <button
+        onClick={toggleAccordion}
+        className={`flex items-center justify-center w-full px-4 py-2 rounded-custom font-bold text-lg transition-colors duration-300 ${
+    isOpen ? 'bg-gradient-to-r from-primary-500 to-secondary-500 opacity-70' : 'bg-gradient-to-r from-indigo-500 to-primary-400  opacity-70 text-black'
+  }`}
+      >
+        <span>{title}</span>
+        {isOpen ? <MdExpandLess size={24} /> : <MdExpandMore size={24} />}
+      </button>
+      <div
+        ref={contentRef}
+        style={{ maxHeight: isOpen ? `${contentRef.current.scrollHeight}px` : '0' }}
+        className="transition-max-height duration-300 ease-in-out  overflow-hidden"
+      >
+        <div className="p-4">{children}</div>
+      </div>
+    </div>
+  );
+};
+
+
+const SkillsSection = () => {
+  return (
+    <>
+      <AccordionItem title="Langages & Scripting">
+        <ul>
           <li>HTML5</li>
           <li>CSS / Sass / Less</li>
           <li>JavaScript (ES6+) / TypeScript</li>
           <li>PHP7</li>
           <li>Shell Scripting: Bash</li>
+          {/* autres éléments */}
         </ul>
-
-        <h3 className="font-bold text-sm mb-2">Frameworks & Bibliothèques</h3>
-        <ul className="list mb-4 text-sm">
+      </AccordionItem>
+      <AccordionItem title="Frameworks & Bibliothèques">
+      <ul >
           <li>React / Next.js / Gatsby</li>
           <li>Bootstrap / Tailwind</li>
         </ul>
-
-        <h3 className="font-bold text-sm mb-2">Développement Back-End et Bases de Données</h3>
-        <ul className="list mb-4 text-sm">
+        {/* contenu */}
+      </AccordionItem>
+      <AccordionItem title="Développement Back-End et Bases de Données">
+      <ul >
           <li>Node.js</li>
           <li>MongoDB</li>
           <li>MySQL</li>
         </ul>
-
-        <h3 className="font-bold text-sm mb-2">Outils & Infrastructure</h3>
-        <ul className="list mb-4 text-sm">
+        {/* contenu */}
+      </AccordionItem>
+      <AccordionItem title="Outils & Infrastructure">
+      <ul >
           <li>Git / GitHub / GitLab</li>
           <li>Vercel / Netlify / Heroku/ DigitalOcean</li>
           <li>Apache</li>
           <li>HTTPS / SSL / Gestion DNS / Cloudflare</li>
         </ul>
-
-        <h3 className="font-bold text-sm mb-2">Conception & Gestion de Projet</h3>
-        <ul className="list mb-4 text-sm">
+        {/* contenu */}
+      </AccordionItem>
+      <AccordionItem title="Conception & Gestion de Projet">
+      <ul >
           <li>Conception: UML</li>
           <li>Gestion de Projet: Kanban</li>
         </ul>
-
-        <h3 className="font-bold text-sm mb-2">CMS & Optimisation</h3>
-        <ul className="list text-sm">
+        {/* contenu */}
+      </AccordionItem>
+      <AccordionItem title="CMS & Optimisation">
+      <ul >
           <li>CMS: WordPress / PrestaShop</li>
           <li>Responsive Design / SEO / Accessibilité Web (WCAG)</li>
         </ul>
-      </>
-    ),
-  },
-  {
-    title: "Education",
-    id: "education",
-    content: (
+        {/* contenu */}
+      </AccordionItem>
+     
+    </>
+  );
+};
+const EducationSection = () => {
+  return (
     <>
-      <ul className="list text-sm">
+      <AccordionItem title="Parcours académique">
+      <ul >
         <li>
           Openclassrooms - Développement d&apos;applications JavaScript React - Titre RNCP Niveau BAC+4 (en cours)
           </li>
@@ -68,44 +126,50 @@ const TAB_DATA = [
           Université d&apos;État des Télécommunications de Saint-Pétersbourg nommée d&apos;après le Professeur M.A. Bonch-Bruevich - Programmation dans les Systèmes Informatiques (2021)
         </li>
       </ul>
-    </>
-  ),
-  },
-  {
-    title: "Certifications",
-    id: "certifications",
-    content: (
+</AccordionItem>
+</>
+  );
+};
+
+const CertificationsSection = () => {
+  return (
     <>
-      <h3 className="font-bold text-sm mb-2">Outils de Création</h3>
-      <ul className="list text-sm">
+      <AccordionItem  title="Outils de Création">
+      <ul >
         <li>Adobe Creative Cloud</li>
         <li>Corel</li>
         <li>Blender</li>
         <li>Figma</li>
       </ul>
-<br/>
-      <h3 className="font-bold text-sm mb-2">Compétences en Design</h3>
-      <ul className="list mb-4 text-sm">
-        <li>2D / 3D</li>
-        <li>Motion Design</li>
-      </ul>
-    </>
-  ),
-  },
-  {
-    title: "Linguistique",
-    id: "langues",
-    content: (
-      <ul className="list text-sm">
+</AccordionItem>
+<AccordionItem  title="Compétences en Design">
+<ul >
+          <li>CMS: WordPress / PrestaShop</li>
+          <li>Responsive Design / SEO / Accessibilité Web (WCAG)</li>
+        </ul>
+</AccordionItem>
+</>
+  );
+};
+
+const LinguistiqueSection = () => {
+  return (
+    <>
+      <AccordionItem title="Langues">
+      <ul >
         <li>Anglais - C1 </li>
         <li>Français - C1</li>
         <li>Espagnol - C1</li>
         <li>Russe - C1</li>
          <li>Grec - B2</li>
       </ul>
-    ),
-  },
-];
+</AccordionItem>
+</>
+  );
+};
+
+
+
 
 
 
@@ -123,12 +187,14 @@ const ReadMoreText = ({ text, maxLength }) => {
     // On utilise 'substring' pour couper le texte et 'cleanText' pour nettoyer le texte
    
 
+  
+
   return (
     <>
    <p className="text-base md:text-sm" style={{ whiteSpace: 'pre-wrap' }}>
-      {isReadMore ? text.slice(0, maxLength) + "..." : text}
+      {isReadMore ? text.slice(0, maxLength) + "" : text}
       </p>
-      <button onClick={toggleReadMore} className="text-primary-500 hover:text-secondary border-slate-700">
+      <button onClick={toggleReadMore} className="text-primary-500 hover:text- border-slate-700">
         {isReadMore ? 'Savoir plus' : 'Montrer moins'}
       </button>
     </>
@@ -144,7 +210,27 @@ const AboutSection = () => {
       setTab(id);
     });
   };
-
+  const renderContent = () => {
+    switch(tab) {
+      case "skills":
+        return <SkillsSection />;
+      case "education":
+        return <EducationSection />
+        // Retournez le contenu pour education ici
+        ;
+      case "certifications":
+        return <CertificationsSection />
+      
+        // Retournez le contenu pour certifications ici
+        ;
+      case "langues":
+        return <LinguistiqueSection />
+        // Retournez le contenu pour langues ici
+        ;
+      default:
+        return <SkillsSection />;
+    }
+  };
   
 
   const fullText = `
@@ -165,7 +251,11 @@ const AboutSection = () => {
     <section className="text-white" id="about">
       <div className="md:grid md:grid-cols-2 gap-8 items-start py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <div className="py-8">
-        <Image src="/images/setup.webp" alt="setup de geek" width={500} height={500} className="rounded-custom transform rotate-[-6deg]"/></div>
+        <Image src="/images/setup.webp" alt="setup de geek" width={500} height={500} className="rounded-custom transform rotate-[6deg]"/>
+        <div className="hidden md:block">
+            <Image src="/images/moi.webp" alt="description de la deuxième image" width={500} height={500} className="rounded-custom transform rotate-[-6deg] mt-16" />
+          </div>
+        </div>
         <div className="mt-4 md:mt-0 text-center flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">01. Ma Saga Numérique</h2>
           <ReadMoreText text={fullText} maxLength={295} />
@@ -199,10 +289,11 @@ const AboutSection = () => {
             >
               {" "}
               🌍 LangueLink{" "}
-              </TabButton>
+            </TabButton>
+            {/* ... autres boutons d'onglet */}
           </div>
           <div className="mt-8 ">
-            {TAB_DATA.find((t) => t.id === tab).content}
+            {renderContent()}
           </div>
         </div>
       </div>

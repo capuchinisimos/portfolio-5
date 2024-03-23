@@ -5,6 +5,28 @@ import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
+const imageVariants = {
+  initial: {
+    scale: 1,
+    rotate: 0
+  },
+  animate: {
+    scale: [1, 1.05, 1],
+    rotate: [0, 10, 0],
+    transition: {
+      scale: {
+        repeat: Infinity,
+        duration: 5,
+        ease: "easeInOut"
+      },
+      rotate: {
+        repeat: Infinity,
+        duration: 5,
+        ease: "easeInOut"
+      }
+    }
+  }
+};
 const HeroSection = () => {
   return (
     <section className="lg:py-16">
@@ -75,23 +97,25 @@ const HeroSection = () => {
         </motion.div>
         
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-4 place-self-center mt-4 pl-8 lg:mt-0"
-        >
-         <div className="  bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-custom rotate-[6deg]">
-  <Image
-    src="/images/avatar1.webp"
-    alt="Océane développeuse web, une jeune fille ambitieuse habillé en t-shirt blanche et jeans noir troué"
-    className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 "
-    width={300}
-    height={300}
-  />
-</div>
-<strong style={{ visibility: 'hidden' }}> Océane jeune développeuse JavaScript React à Paris
-    </strong>
+      initial="initial"
+      animate="animate"
+      className="col-span-4 place-self-center mt-4 pl-8 lg:mt-0"
+    >
+      <div className="bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative rounded-custom rotate-[6deg] ">
+        <motion.div variants={imageVariants}>
+          <Image
+            src="/images/avatar1.webp"
+            alt="Océane développeuse web, une jeune fille ambitieuse habillé en t-shirt blanche et jeans noir troué"
+            className="absolute  -translate-y-16 left-16"
+            width={300}
+            height={300}
+          />
         </motion.div>
+      </div>
+      <strong style={{ visibility: 'hidden' }}>
+        Océane jeune développeuse JavaScript React à Paris
+      </strong>
+    </motion.div>
       </div>
     </section>
   );

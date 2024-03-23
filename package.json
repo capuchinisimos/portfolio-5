@@ -3,8 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "deploy": "NEXT_TELEMETRY_DISABLED=1 next build",
+    "dev": "next dev",
     "start": "next start",
     "lint": "next lint"
   },
@@ -36,14 +37,5 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.34.0",
     "typescript": "^5.4.2"
-  },
-  "scripts": {
-    "build": "next build",
-    "deploy": "NEXT_TELEMETRY_DISABLED=1 next build",
-    "dev": "next dev",
-    "start": "next start",
-    "lint": "next lint"
   }
-  
-
 }
